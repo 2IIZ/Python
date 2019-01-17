@@ -2,26 +2,33 @@
 # @Last modified time: 2019-01-03T10:36:42+01:00
 
 # f5 to run
+# Python Refresh for using Django
 
 print(" _______________________VARIABLES______________________\n\n")
 
+# the variable age is now an Int of 20
 age = 20
-
+# the variable name is "Ivan"
 name = "Ivan"
-
+# print my name and my age using format()
 print("Hello my name is {} and my age is {}\n\n".format(name, age))
 
 
 print(" _______________________CONDITION______________________\n\n")
 
+# set variable boolean -> True or False
 boolean = False
 
+# if my age is strictly greater than 18, print() and change boolean to True
+# you can use all these operators : '<' '>' '<=' '>=' '==' '!='
 if age > 18:
     print("You're older than 18")
     boolean = True
+#if I'm under 18, print() but don't change the boolean
 else:
     print("You're too young !")
 
+# if boolean is True then print()
 if boolean:
     print("The boolean is True")
 
@@ -39,7 +46,7 @@ hello("a string made by hand")
 print("\n")
 
 
-print(" _______________________LISTS______________________\n\n")
+print(" ________________________LISTS_______________________\n\n")
 
 dogNames = ["Jax", "Cro", "Iv", "Squalo"]
 
