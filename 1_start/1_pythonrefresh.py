@@ -6,6 +6,12 @@
 
 print(" _______________________VARIABLES______________________\n\n")
 
+
+type(3) #-> <class 'int'>
+type("fwa") #-> <class 'str'>
+type(3.4) #-> <class 'float'>
+
+
 # the variable age is now an Int of 20
 age = 20
 # the variable name is "Ivan"
@@ -51,21 +57,27 @@ print(" ________________________LISTS_______________________\n\n")
 dogNames = ["Jax", "Cro", "Iv", "Squalo"]
 
 #print list
-print(dogNames)
+print("List of dogs :", dogNames)
 
 #add one item
 dogNames.insert(0, "AddedTo0")
-print(dogNames)
+print("One dog added :", dogNames)
 
 #show one item
-print(dogNames[3])
+print("Showing the [3] one :", dogNames[3])
 
 #del one item
 del(dogNames[4])
-print(dogNames)
+print("The dog [4] is lost =(", dogNames)
+
+# add an item to the end of the list
+dogNames.append('NewOne')
+print("We found a new one :", dogNames[-1]) # [-1] -> shows the last item
 
 #length of list
-print(len(dogNames))
+print("There is", len(dogNames), "dogs")
+print("List of dogs :", dogNames)
+
 
 print("\n")
 
@@ -77,7 +89,7 @@ for dog in dogNames:
 print("\n")
 
 #go through 0 to 10
-for x in range(0, 11):
+for x in range(0, 6):
 	print(x)
 
 print("\n")
