@@ -83,12 +83,13 @@ print("\n")
 
 print(" _______________________LOOPS______________________\n\n")
 
+print("Dog's name :")
+# taking the list of dogNames and for every one of them create dog and go throug the list
 for dog in dogNames:
-	print(dog)
+	print(" -> ",dog)
 
-print("\n")
-
-#go through 0 to 10
+print("\nLoop throug 0 to 5")
+# go through 0 to 10
 for x in range(0, 6):
 	print(x)
 
@@ -97,24 +98,33 @@ print("\n")
 bool = True
 #verify if it's true then print true
 while bool == True:
-	print(bool)
-	bool = False
+	print("The conditional bool is :", bool)
+	bool = False # stop the loop
 
+print("After the loop, is :", bool)
+print("\n")
 
 print(" _______________________DICTIONARIES______________________\n\n")
 
 goats = {"Fido":8, "Camop":10, "Thor":4}
 
 #print the age of Fido !
-print(goats["Fido"])
+print("Fido age :", goats["Fido"])
 
 #kill one goat
 del(goats["Camop"])
+print("Camop have been murderer =(")
+
 
 #new born
 goats["Pedro"] = 0
+print("A new goat is born !!")
 
-#print all goats
+#print all keys
+print(goats.keys())
+#print all values
+print(goats.values())
+# print the dictionary
 print(goats)
 
 print("\n")
