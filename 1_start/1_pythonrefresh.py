@@ -1,5 +1,3 @@
-# @Date:   2019-01-01T11:10:47+01:00
-# @Last modified time: 2019-01-18T09:34:30+01:00
 
 # f5 to run
 # Python Refresh for using Django
@@ -78,6 +76,10 @@ print("We found a new one :", dogNames[-1]) # [-1] -> shows the last item
 print("There is", len(dogNames), "dogs")
 print("List of dogs :", dogNames)
 
+# enumerate() will take the key and value separetly from the list we gave him. So we can use separetly the key and value
+for key, value in enumerate(dogNames):
+	print(key, value)
+
 
 print("\n")
 
@@ -123,9 +125,10 @@ print("A new goat is born !!")
 #print all keys
 print(goats.keys())
 #print all values
-print(goats.values())
+print(goats.values(), "\n")
 # print the dictionary
-print(goats)
+for key, value in goats.items():
+	print("{} is {} years old".format(key, value))
 
 print("\n")
 
