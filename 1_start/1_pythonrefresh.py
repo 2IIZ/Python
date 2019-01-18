@@ -1,5 +1,5 @@
 # @Date:   2019-01-01T11:10:47+01:00
-# @Last modified time: 2019-01-03T10:36:42+01:00
+# @Last modified time: 2019-01-18T09:34:30+01:00
 
 # f5 to run
 # Python Refresh for using Django
@@ -44,7 +44,7 @@ print("\n")
 print(" _______________________FUNCTION______________________\n\n")
 
 def hello(theString):
-    print("Starting with " + theString)
+    print("Starting with :" + theString)
 
 hello("a string made by hand")
 
