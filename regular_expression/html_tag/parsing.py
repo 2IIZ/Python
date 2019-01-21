@@ -28,11 +28,11 @@ extracted_html = re.sub('&nbsp;', ' ', extracted_html)
 # extracted_html = re.sub('<a [^>]{0,}>', '', extracted_html)
 extracted_html = re.sub('<([Bb]|/[Bb]|[Aa]|/[Aa]|[Ii]|/[Ii])[^>]{0,}>', '', extracted_html)
 
-extracted_html = extracted_html.split('Nom commun : ')
-extracted_html = extracted_html.split('Nom latin : ')
+# extracted_html = extracted_html.split('Nom commun : ')
+# extracted_html = extracted_html.split('Nom latin : ')
 
 # splited in two but list so cannot use it another time.
-# so the good thing to do is to save it when splited 
+# so the good thing to do is to save it when splited
 
 
 
