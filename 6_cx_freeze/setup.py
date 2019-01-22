@@ -1,5 +1,7 @@
 from cx_Freeze import setup, Executable
 
+# need to install visual studio c++
+
 # On appelle la fonction setup
 setup(
     name = "Tutorial",
