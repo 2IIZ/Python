@@ -1,0 +1,5 @@
+#!c:\wamp64\www\python\python-venv\scripts\python.exe
+from cx_Freeze.setupwriter import main
+
+main()
+
