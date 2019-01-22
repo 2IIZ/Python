@@ -153,3 +153,5 @@ mygoat.bleat()
 
 print(mygoat.name)
 print(Goat.goatInfo)
+
+input()
