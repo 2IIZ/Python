@@ -91,7 +91,7 @@ for dog in dogNames:
 	print(" -> ",dog)
 
 print("\nLoop throug 0 to 5")
-# go through 0 to 10
+# go through 0 to 5
 for x in range(0, 6):
 	print(x)
 
