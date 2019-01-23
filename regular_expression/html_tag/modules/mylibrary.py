@@ -2,6 +2,13 @@ import re
 
 global_variable = "nada"
 
+def find_html(html):
+    #search first similarity and take all text from the first <b>
+    extracted_html = re.findall(re.compile("<[Bb]>.*"), html)
+
+    extracted_html = ''.join(extracted_html) # join the list to a string
+    return extracted_html
+
 def text_formating(extracted_html):
     #________________________REGEX_______________________
     # delete and replace every tags and formating.
@@ -31,6 +38,14 @@ def extract_title(html):
            (value == "croissance :")):
             extracted_title.append(value)
     return extracted_title
+
+def extract_content(extracted_html):
+    extracted_html = ''.join(extracted_html)
+    extracted_html = re.split('Nom commun :|Nom latin :|famille :|catégorie :|port :|feuillage :|floraison :|couleur :|croissance :', extracted_html)
+
+    del(extracted_html[0]) # delete first entry because is always ''
+
+    return extracted_html
 
 
 def beautify_list():

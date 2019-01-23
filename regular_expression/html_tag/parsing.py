@@ -1,36 +1,27 @@
 import re  # module re
+from modules.mylibrary import *  #____My library____
 
-#____My library____
-from modules.mylibrary import *
-
+# open file
 file_object  = open("erable.html", "r", encoding="utf8")
 html = file_object.read()
 
-#search first similarity and take all text from teh first <b>
-p_pattern = re.compile("<[Bb]>.*")
-extracted_html = re.findall(p_pattern, html)
+# search and find html from the page, return string html
+extracted_html = find_html(html)
 
-extracted_html = ''.join(extracted_html) # join the list to a string
-
-# delete tags and replace formating
+# delete tags and replace formating, return string
 extracted_html = text_formating(extracted_html)
 
-# extract title ("Nom commun :" ...) from the split
-titles  = extract_title(extracted_html)
+# extract title (->"Nom commun :"<- "content") from the split, return list
+extracted_titles  = extract_title(extracted_html)
 
-extracted_html = ''.join(extracted_html)
-extracted_html = re.split('Nom commun :|Nom latin :|famille :|catégorie :|port :|feuillage :|floraison :|couleur :|croissance :', extracted_html)
-
-del(extracted_html[0])
-
-# print(titles)
-# print(extracted_html)
+# extract content ("Nom commun :" ->"content"<-) from the split, return list
+extracted_content = extract_content(extracted_html)
 
 list={}
-
-for x in range(0, len(titles)):
-    list[titles[x]] = extracted_html[x]
-
+# link the two list together
+for x in range(0, len(extracted_titles)):
+    list[extracted_titles[x]] = extracted_content[x]
+# print it
 for key, value in list.items():
 	print(key, value, "\n")
 
