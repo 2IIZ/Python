@@ -17,6 +17,7 @@ extracted_titles  = extract_title(extracted_html)
 # extract content ("Nom commun :" ->"content"<-) from the split, return list
 extracted_content = extract_content(extracted_html)
 
+
 list={}
 # link the two list together
 for x in range(0, len(extracted_titles)):
@@ -24,6 +25,3 @@ for x in range(0, len(extracted_titles)):
 # print it
 for key, value in list.items():
 	print(key, value, "\n")
-
-
-print(global_variable) # replace the "Nom commun :" with variables

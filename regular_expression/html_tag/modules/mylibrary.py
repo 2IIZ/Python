@@ -1,6 +1,8 @@
 import re
 
-global_variable = "nada"
+flor_titles = "Nom commun :|Nom latin :|famille :|catégorie :|port :|feuillage :|floraison :|couleur :|croissance :|fruits :|hauteur :|plantation :|multiplication :|sol :|emplacement:|zone :|origine :|entretien :"
+
+
 
 def find_html(html):
     #search first similarity and take all text from the first <b>
@@ -26,22 +28,26 @@ def text_formating(extracted_html):
 
 def extract_title(html):
     # split when found the titles saving the (splited word)
-    html = re.split('(Nom commun :|Nom latin :|famille :|catégorie :|port :|feuillage :|floraison :|couleur :|croissance :)', html)
+    html = re.split('('+ flor_titles +')', html)
 
     # extract the titles of the list that the split() return
     extracted_title = []
-    for key, value in enumerate(html):
-        if ((value == "Nom commun :") or (value == "Nom latin :") or
-           (value == "famille :") or (value == "catégorie :") or
-           (value == "port :") or (value == "feuillage :") or
-           (value == "floraison :") or (value == "couleur :") or
-           (value == "croissance :")):
-            extracted_title.append(value)
+    raw_titles = flor_titles.split("|")
+
+    # loop through the html splited
+    for html_title_key, html_title_value in enumerate(html):
+        # loop into the titles of raw title to verify if it's equals to html splited
+        # and store them in a list
+        for raw_title_key, raw_title_value in enumerate(raw_titles):
+            if (html_title_value == raw_title_value):
+                extracted_title.append(html_title_value)
     return extracted_title
+
+
 
 def extract_content(extracted_html):
     extracted_html = ''.join(extracted_html)
-    extracted_html = re.split('Nom commun :|Nom latin :|famille :|catégorie :|port :|feuillage :|floraison :|couleur :|croissance :', extracted_html)
+    extracted_html = re.split(flor_titles, extracted_html)
 
     del(extracted_html[0]) # delete first entry because is always ''
 
