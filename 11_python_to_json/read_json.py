@@ -1,6 +1,8 @@
 import json
 
-with open('data.json') as data_file:
+with open('data.json', encoding="utf8") as data_file:
     data = json.load(data_file)
 
-    print(data)
+
+
+    print(json.dumps(data, indent=4, ensure_ascii=False))

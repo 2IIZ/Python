@@ -1,8 +1,6 @@
 import json
 
-json_data = json.dumps(
-
-[
+json_data = [
   {
     "nomcommun": "Abélia de Chine",
     "nomcommuns": {
@@ -12,17 +10,15 @@ json_data = json.dumps(
     },
     "nomlatin": "Abelia chinensis  (R.Br.), synonymes Abelia ascherso...",
     "famille": "Caprifoliaceae",
-    "feuillage ": "caduc ou semi-persistant, vert fon...",
-    "couleur ": "blanc pur, revers lavé de rose, bout...",
-    "hauteur ": "1.5 m.",
-    "plantation ": "automne à hiver à printemps.",
-    "zone  ": "8 - 10",
+    "feuillage": "caduc ou semi-persistant, vert fon...",
+    "couleur": "blanc pur, revers lavé de rose, bout...",
+    "hauteur": "1.5 m.",
+    "plantation": "automne à hiver à printemps.",
+    "zone": "8 - 10",
   }
 ]
 
-, indent=4)
+with open('data.json', 'w', encoding='utf-8') as outfile:
+    json.dump(json_data, outfile, indent=4, ensure_ascii=False)
 
-with open('data.json', 'w') as outfile:
-    json.dump(json_data, outfile, sort_keys=True, indent=4)
-
-print("Writing in file... \n\n"+json_data)
+print("Writing in file... \n\n"+json.dumps(json_data, indent=4, ensure_ascii=False))

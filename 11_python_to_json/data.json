@@ -1,1 +1,17 @@
-"[\n    {\n        \"nomcommun\": \"Ab\\u00e9lia de Chine\",\n        \"nomcommuns\": {\n            \"a\": \"Ab\\u00e9lia de Chine\",\n            \"b\": \"Ab\\u00e9lie de Chine\",\n            \"c\": 0\n        },\n        \"nomlatin\": \"Abelia chinensis\\u00a0 (R.Br.), synonymes Abelia ascherso...\",\n        \"famille\": \"Caprifoliaceae\",\n        \"feuillage \": \"caduc ou semi-persistant, vert fon...\",\n        \"couleur \": \"blanc pur, revers lav\\u00e9 de rose, bout...\",\n        \"hauteur \": \"1.5 m.\",\n        \"plantation \": \"automne \\u00e0 hiver \\u00e0 printemps.\",\n        \"zone  \": \"8 - 10\"\n    }\n]"
+[
+    {
+        "nomcommun": "Abélia de Chine",
+        "nomcommuns": {
+            "a": "Abélia de Chine",
+            "b": "Abélie de Chine",
+            "c": 0
+        },
+        "nomlatin": "Abelia chinensis  (R.Br.), synonymes Abelia ascherso...",
+        "famille": "Caprifoliaceae",
+        "feuillage": "caduc ou semi-persistant, vert fon...",
+        "couleur": "blanc pur, revers lavé de rose, bout...",
+        "hauteur": "1.5 m.",
+        "plantation": "automne à hiver à printemps.",
+        "zone": "8 - 10"
+    }
+]
