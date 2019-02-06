@@ -1,7 +1,6 @@
 import json
 
-json_data = [
-  {
+json_data = {
     "nomcommun": "Abélia de Chine",
     "nomcommuns": {
       "a": "Abélia de Chine",
@@ -15,8 +14,7 @@ json_data = [
     "hauteur": "1.5 m.",
     "plantation": "automne à hiver à printemps.",
     "zone": "8 - 10",
-  }
-]
+}
 
 with open('data.json', 'w', encoding='utf-8') as outfile:
     json.dump(json_data, outfile, indent=4, ensure_ascii=False)
